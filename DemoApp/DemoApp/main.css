@@ -1,0 +1,93 @@
+﻿html, body {
+    height: 100%;
+}
+
+#sidebar {
+    padding-left: 0;
+    float: inherit;
+    height: 100%;
+}
+
+#sidebar .collapse.in {
+    display: inline;
+}
+
+#sidebar > .nav > li > a {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*material icons different sizing*/
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+#main {
+    padding: 0px;
+    left: 0;
+}
+
+.k-chart {
+	height: inherit !important;
+}
+
+@media screen and (max-width: 768px) {
+    #sidebar {
+        min-width: 44px;
+    }
+
+    #main {
+        width: 1%;
+        left: 0;
+    }
+
+    #sidebar .visible-xs {
+        display: inline !important;
+    }
+
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .row-offcanvas-left.active {
+        left: 45%;
+    }
+
+        .row-offcanvas-left.active .sidebar-offcanvas {
+            left: -45%;
+            position: absolute;
+            top: 0;
+            width: 45%;
+        }
+}
+
+
+@media screen and (min-width: 768px) {
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+    }
+
+    .row-offcanvas-left.active {
+        left: 3%;
+    }
+
+        .row-offcanvas-left.active .sidebar-offcanvas {
+            left: -3%;
+            position: absolute;
+            top: 0;
+            width: 3%;
+            text-align: center;
+            min-width: 42px;
+        }
+
+    #main {
+        left: 0;
+    }
+}

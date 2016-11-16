@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+    <link rel="icon" href="favicon.ico">
+    <title>DemoApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) { console.error(err); });
+    </script>
+
+    <!-- jQuery v2.2.4-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+    
+    <!-- BootStrap v3.3.6 -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="node_modules/@telerik/kendo-theme-default/dist/all.css" />
+
+    <!--extra stuff added-->
+    <!--material icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!--font-awesome icons-->
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!--primeng-->
+    <link rel="stylesheet" type="text/css" href="node_modules/primeng/resources/primeng.min.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/primeng/resources/themes/omega/theme.css" />
+
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+    <!--extra style for animation-->
+    <link rel="stylesheet" href="node_modules/loaders.css/loaders.min.css">
+    <!--materialize css & js-->
+    <link rel="stylesheet" type="text/css" href="node_modules/materialize-css/dist/css/materialize.min.css" />
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+
+    <!--Kendo-->
+    <script src="http://kendo.cdn.telerik.com/2016.3.1028/js/kendo.all.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.3.1028/js/kendo.angular.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.rtl.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.silver.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.mobile.all.min.css" />
+    
+    
+</head>
+<body>
+    
+    <container-app></container-app>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<kendo-chart [tooltip]="{visible:'true'}"
+             [seriesColors]="chart.Data.datasets[0].allColors" height="1000" width="1000">
+
+    <kendo-chart-legend [visible]="chart.Data.showLegend" position="top"></kendo-chart-legend>
+    <kendo-chart-title id="chartTitle"
+                       [visible]="chart.Options.title.display" [text]="chart.Options.title.text">
+    </kendo-chart-title>
+
+    <kendo-chart-category-axis>
+        <kendo-chart-category-axis-item [categories]="chart.Data.labels"
+                                        [labels]="{ rotation: 'auto' }"
+                                        [title]="chart.Options.XTitle">
+        </kendo-chart-category-axis-item>
+    </kendo-chart-category-axis>
+
+    <kendo-chart-value-axis>
+        <kendo-chart-value-axis-item [title]="chart.Options.YTitle" >
+            <kendo-chart-value-axis-item-labels [content]="setLabelFormat">
+            </kendo-chart-value-axis-item-labels>
+        </kendo-chart-value-axis-item>
+    </kendo-chart-value-axis>
+
+    <kendo-chart-series (seriesClick)="onSeriesClick($event)">
+        <span *ngFor="let dataset of chart.Data.datasets">
+            <kendo-chart-series-item [name]="dataset.label" [data]="dataset.data"
+                                     [type]="dataset.type">
+                <kendo-chart-series-item-labels visible="true" [content]="setLabelFormat">
+
+                </kendo-chart-series-item-labels>    
+            </kendo-chart-series-item>
+            
+        </span>
+        
+    </kendo-chart-series>
+
+</kendo-chart>

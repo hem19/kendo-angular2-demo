@@ -1,0 +1,13 @@
+
+<!--<div id="divSpinner" align="center" *ngIf="chartsExist && !isDataLoaded">
+    <loaders-css [loader]="'line-scale-pulse-out-rapid'" [loaderClass]="'spinner'"></loaders-css>
+</div>
+
+<div id="divGoldenLayout"></div>-->
+<kendo-chart>
+    <kendo-chart-title text="Sample Chart"></kendo-chart-title>
+    <kendo-chart-series>
+        <kendo-chart-series-item [data]="seriesData">
+        </kendo-chart-series-item>
+    </kendo-chart-series>
+</kendo-chart>
